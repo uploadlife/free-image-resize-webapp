@@ -1,0 +1,16 @@
+[Unit]
+Description=Gunicorn instance for Image Resizer Flask App
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/path/to/your/project
+Environment="PATH=/path/to/your/project/venv/bin"
+ExecStart=/path/to/your/project/venv/bin/gunicorn \
+          --workers 3 \
+          --bind unix:/path/to/your/project/image_resizer.sock \
+          app:app
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+*.env
+
+# Flask uploads/resized directories
+uploads/
+resized/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
